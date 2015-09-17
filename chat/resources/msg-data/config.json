@@ -21,7 +21,7 @@
 			"name": "receiver",
 			"type": "string",
 			"typeLabel": "string",
-			"required": true,
+			"required": false,
 			"id": "receiver",
 			"order": 2
 		}
