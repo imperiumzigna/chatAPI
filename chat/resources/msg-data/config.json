@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"message": {
+			"name": "message",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "message",
+			"order": 0
+		},
+		"owner": {
+			"name": "owner",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "owner",
+			"order": 1
+		},
+		"receiver": {
+			"name": "receiver",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "receiver",
+			"order": 2
+		}
+	}
+}
