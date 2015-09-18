@@ -1,0 +1,1 @@
+C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\CordovaApp.Windows.jsproj;neutral
