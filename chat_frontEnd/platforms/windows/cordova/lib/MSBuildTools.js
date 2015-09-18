@@ -29,21 +29,15 @@ function MSBuildTools (version, path) {
     this.path = path;
 }
 
-MSBuildTools.prototype.buildProject = function(projFile, buildType, buildarch, otherConfigProperties) {
+MSBuildTools.prototype.buildProject = function(projFile, buildType, buildarch) {
     console.log('Building project: ' + projFile);
     console.log('\tConfiguration : ' + buildType);
     console.log('\tPlatform      : ' + buildarch);
 
     var args = ['/clp:NoSummary;NoItemAndPropertyList;Verbosity=minimal', '/nologo',
     '/p:Configuration=' + buildType,
-    '/p:Platform=' + buildarch];
-
-    if (otherConfigProperties) {
-        var keys = Object.keys(otherConfigProperties);
-        keys.forEach(function(key) {
-            args.push('/p:' + key + '=' + otherConfigProperties[key]);
-        });
-    }
+    '/p:Platform=' + buildarch,
+    '/p:BuildFromCordovaTooling=' + true];
 
     return spawn(path.join(this.path, 'msbuild'), [projFile].concat(args));
 };
@@ -57,16 +51,6 @@ module.exports.findAvailableVersion = function () {
         var msbuildTools = versions[0] || versions[1] || versions[2];
 
         return msbuildTools ? Q.resolve(msbuildTools) : Q.reject('MSBuild tools not found');
-    });
-};
-
-module.exports.findAllAvailableVersions = function () {
-    var versions = ['14.0', '12.0', '4.0'];
-
-    return Q.all(versions.map(checkMSBuildVersion)).then(function(unprocessedResults) {
-        return unprocessedResults.filter(function(item) {
-            return !!item;
-        });
     });
 };
 
@@ -88,15 +72,17 @@ function checkMSBuildVersion(version) {
     return deferred.promise;
 }
 
+function getProgramFiles32Folder() {
+    /* jshint ignore:start */ /* Wants to use dot syntax for ProgramFiles, leaving as-is for consistency */
+    return process.env['ProgramFiles(x86)'] || process.env['ProgramFiles'];
+    /* jshint ignore:end */
+}
+
 /// returns an array of available UAP Versions
 function getAvailableUAPVersions() {
-    /*jshint -W069 */
-    var programFilesFolder = process.env['ProgramFiles(x86)'] || process.env['ProgramFiles'];
-    // No Program Files folder found, so we won't be able to find UAP SDK
-    if (!programFilesFolder) return [];
-
-    var uapFolderPath = path.join(programFilesFolder, 'Windows Kits', '10', 'Platforms', 'UAP');
+    var uapFolderPath = path.join(getProgramFiles32Folder(), 'Windows Kits', '10', 'Platforms', 'UAP');
     if (!shell.test('-e', uapFolderPath)) {
+        console.log('No UAP SDK exists on this machine.');
         return []; // No UAP SDK exists on this machine
     }
 

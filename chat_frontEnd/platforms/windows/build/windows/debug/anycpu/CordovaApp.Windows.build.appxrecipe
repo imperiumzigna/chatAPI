@@ -64,9 +64,6 @@
     <AppxPackagedFile Include="C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\www\js\index.js">
       <PackagePath>www\js\index.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\www\WinJS\js\base.js">
-      <PackagePath>www\WinJS\js\base.js</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\www\css\index.css">
       <PackagePath>www\css\index.css</PackagePath>
     </AppxPackagedFile>

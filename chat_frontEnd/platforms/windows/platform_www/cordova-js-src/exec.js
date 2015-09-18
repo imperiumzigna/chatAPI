@@ -61,11 +61,7 @@ module.exports = function (success, fail, service, action, args) {
             onSuccess = function (result, callbackOptions) {
                 callbackOptions = callbackOptions || {};
                 var callbackStatus;
-                // covering both undefined and null.
-                // strict null comparison was causing callbackStatus to be undefined
-                // and then no callback was called because of the check in cordova.callbackFromNative
-                // see CB-8996 Mobilespec app hang on windows
-                if (callbackOptions.status !== undefined && callbackOptions.status !== null) {
+                if (callbackOptions.status != null) {
                     callbackStatus = callbackOptions.status;
                 }
                 else {
@@ -81,11 +77,7 @@ module.exports = function (success, fail, service, action, args) {
             onError = function (err, callbackOptions) {
                 callbackOptions = callbackOptions || {};
                 var callbackStatus;
-                // covering both undefined and null.
-                // strict null comparison was causing callbackStatus to be undefined
-                // and then no callback was called because of the check in cordova.callbackFromNative
-                // see CB-8996 Mobilespec app hang on windows
-                if (callbackOptions.status !== undefined && callbackOptions.status !== null) {
+                if (callbackOptions.status != null) {
                     callbackStatus = callbackOptions.status;
                 }
                 else {
