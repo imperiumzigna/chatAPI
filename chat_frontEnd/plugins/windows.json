@@ -7,8 +7,20 @@
         "files": {}
     },
     "installed_plugins": {
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "example"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "example"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "example"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "example"
+        },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "HelloCordova"
+            "PACKAGE_NAME": "example"
         }
     },
     "dependent_plugins": {}
