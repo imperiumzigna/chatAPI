@@ -3,9 +3,9 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>example</name>
+    <name>Chat</name>
     <description>
-        An Ionic Framework and Cordova project.
+        Feito com Ionic
     </description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">
       Ionic Framework Team
@@ -19,4 +19,5 @@
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <preference name="windows-target-version" value="10.0" />
 </widget>

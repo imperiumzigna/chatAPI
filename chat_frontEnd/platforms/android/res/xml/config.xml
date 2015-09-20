@@ -34,9 +34,9 @@
     <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
     <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
     <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-    <name>example</name>
+    <name>Chat</name>
     <description>
-        An Ionic Framework and Cordova project.
+        Feito com Ionic
     </description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">
       Ionic Framework Team
@@ -50,4 +50,5 @@
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <preference name="windows-target-version" value="10.0" />
 </widget>

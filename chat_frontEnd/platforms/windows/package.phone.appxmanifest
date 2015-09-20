@@ -3,7 +3,7 @@
     <Identity Name="com.ionicframework.example339728" Publisher="CN=$username$" Version="0.0.1.0" />
     <mp:PhoneIdentity PhoneProductId="1cad2cf0-5f28-11e5-b655-1579fc6fe377" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
     <Properties>
-        <DisplayName>example</DisplayName>
+        <DisplayName>Chat</DisplayName>
         <PublisherDisplayName>Ionic Framework Team</PublisherDisplayName>
         <Logo>images\StoreLogo.png</Logo>
     </Properties>
@@ -16,7 +16,7 @@
     </Resources>
     <Applications>
         <Application Id="com.ionicframework.example339728" StartPage="www/index.html">
-            <m3:VisualElements BackgroundColor="transparent" Description="CordovaApp" DisplayName="example" ForegroundText="light" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+            <m3:VisualElements BackgroundColor="transparent" Description="CordovaApp" DisplayName="Chat" ForegroundText="light" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
                 <m3:DefaultTile Square71x71Logo="images\Square71x71Logo.png" Wide310x150Logo="images\Wide310x150Logo.png">
                     <m3:ShowNameOnTiles>
                         <m3:ShowOn Tile="square150x150Logo" />
