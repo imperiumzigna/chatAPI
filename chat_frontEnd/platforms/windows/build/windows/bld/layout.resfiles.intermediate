@@ -87,9 +87,9 @@ www\plugins\cordova-plugin-splashscreen\www\splashscreen.js
 www\plugins\cordova-plugin-splashscreen\www\windows\SplashScreenProxy.js
 www\templates\chat-detail.html
 www\templates\create-account.html
-www\templates\login.html
 www\templates\tab-account.html
 www\templates\tab-chats.html
 www\templates\tab-dash.html
+www\templates\tab-login.html
 www\templates\tabs.html
 www\WinJS\js\base.js

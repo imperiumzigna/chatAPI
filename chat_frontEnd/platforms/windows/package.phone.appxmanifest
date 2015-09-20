@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
     <Identity Name="com.ionicframework.example339728" Publisher="CN=$username$" Version="0.0.1.0" />
-    <mp:PhoneIdentity PhoneProductId="30c1a8c0-5f18-11e5-804a-e3b78ae31f5e" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
+    <mp:PhoneIdentity PhoneProductId="1cad2cf0-5f28-11e5-b655-1579fc6fe377" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
     <Properties>
         <DisplayName>example</DisplayName>
         <PublisherDisplayName>Ionic Framework Team</PublisherDisplayName>
