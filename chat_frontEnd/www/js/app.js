@@ -78,18 +78,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    .state('tab.logout',{
+      url:'/logout',
+    'tab-logout': {
+      templateUrl:'templates/tab-logout.html'
+    }
+    })
 
-
-    .state('tab-login', {
+    .state('tab.login', {
       url: '/login',
+      //abstract:true,
       views: {
         'tab-login': {
-          templateUrl: 'templates/tab-login.html'
+          templateUrl: 'templates/tab-login.html',
+          controller:'LoginCtrl'
         }
       }
     });
 
-    // if none of the above states are matched, use this as the fallback
+
+
+    // Se nenhuma rota é encontrada
   $urlRouterProvider.otherwise('/tab/dash');
 
 });

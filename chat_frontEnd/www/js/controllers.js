@@ -17,6 +17,11 @@ angular.module('starter.controllers', [])
   };
 })
 
+  .controller('LoginCtrl',function($scope,$stateParams,user){
+    // Adicionar depois conexão com API
+
+
+  })
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
