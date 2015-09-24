@@ -68,6 +68,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    .state('cadastro',{
+      url:'/cadastro',
+      templateUrl:'templates/cadastro.html',
+      controller:'CadastroCtrl'
+    })
 
     .state('tab.account', {
       url: '/account',

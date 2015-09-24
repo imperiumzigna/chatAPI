@@ -57,7 +57,7 @@ angular.module('starter.services', [])
         var deferred = $q.defer();
         var promise = deferred.promise;
 
-        if (name == 'user' && pw == 'senha') {
+        if (name == 'igor' && pw == 'senha') {
           deferred.resolve('Bem vindo ' + name + '!');
         } else {
           deferred.reject('Credenciais erradas.');
@@ -76,6 +76,12 @@ angular.module('starter.services', [])
   })
 
 .service('LogoutService',function(){
+    return{
+
+    }
+  })
+
+.service('CadastroService',function(){
     return{
 
     }

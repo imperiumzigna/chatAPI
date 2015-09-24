@@ -31,14 +31,22 @@ angular.module('starter.controllers', [])
         });
       });
     }
-  })
+    $scope.cadastro = function(){
+      $state.go('cadastro');
+    }
 
+  })
+// Controle Logout
   .controller('LogoutCtrl', function($scope,LogoutService, $state) {
-    // Controle Logout
+
 
     $scope.logout = function(){
 
 }
+  })
+
+  .controller('CadastroCtrl',function($scope,CadastroService,$state){
+
   })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
