@@ -17,11 +17,30 @@ angular.module('starter.controllers', [])
   };
 })
 
-  .controller('LoginCtrl',function($scope,$stateParams,user){
-    // Adicionar depois conexão com API
+  .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
+    $scope.data = {};
 
-
+    $scope.login = function() {
+      LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
+        $state.go('tab.dash');
+        var alerta= $ionicPopup.alert({title:'Bem vindo '+ $scope.data.username});
+      }).error(function(data) {
+        var alertPopup = $ionicPopup.alert({
+          title: 'Login falhou!',
+          template: 'Por favor, cheque suas credenciais!'
+        });
+      });
+    }
   })
+
+  .controller('LogoutCtrl', function($scope,LogoutService, $state) {
+    // Controle Logout
+
+    $scope.logout = function(){
+
+}
+  })
+
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })

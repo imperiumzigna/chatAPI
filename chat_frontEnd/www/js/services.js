@@ -29,7 +29,8 @@ angular.module('starter.services', [])
     name: 'Pessoa 5',
     lastText: 'Bom',
     face: 'https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png'
-  }];
+  }]
+
 
   return {
     all: function() {
@@ -47,4 +48,37 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+})
+
+  .service('LoginService', function($q) {
+    return {
+      loginUser: function(name, pw) {
+
+        var deferred = $q.defer();
+        var promise = deferred.promise;
+
+        if (name == 'user' && pw == 'senha') {
+          deferred.resolve('Bem vindo ' + name + '!');
+        } else {
+          deferred.reject('Credenciais erradas.');
+        }
+        promise.success = function(fn) {
+          promise.then(fn);
+          return promise;
+        }
+        promise.error = function(fn) {
+          promise.then(null, fn);
+          return promise;
+        }
+        return promise;
+      }
+    }
+  })
+
+.service('LogoutService',function(){
+    return{
+
+    }
+  })
+
+
