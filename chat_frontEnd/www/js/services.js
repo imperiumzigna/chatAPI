@@ -77,14 +77,45 @@ angular.module('starter.services', [])
 
 .service('LogoutService',function(){
     return{
+      logoutUser: function(me){
+// A implementar
+        // Método de logout
+
+
+      }
 
     }
   })
 
 .service('CadastroService',function(){
     return{
+      cadUser: function(name,user,email,pw){
 
+        var deferred = $q.defer();
+        var promise = deferred.promise;
+
+      var userData = {
+      Name:name,
+        Username:user,
+        Email:email,
+        Password:pw
+      }
+
+        // Colocar aqui o método de envio dos dados de acesso
+
+
+        //
+        promise.success = function(fn) {
+          promise.then(fn);
+          return promise;
+        }
+        promise.error = function(fn) {
+          promise.then(null, fn);
+          return promise;
+        }
+        return promise;
+      }
     }
-  })
+  });
 
 

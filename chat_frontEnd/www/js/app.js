@@ -91,7 +91,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
     .state('login', {
-      url: '/login',
+      url: '/',
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl'
     })
@@ -99,6 +99,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 
     // Se nenhuma rota é encontrada
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/');
 
 });

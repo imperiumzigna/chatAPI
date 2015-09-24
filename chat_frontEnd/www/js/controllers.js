@@ -17,13 +17,14 @@ angular.module('starter.controllers', [])
   };
 })
 
+  // Controla a função de login interagindo com o serviço LoginService
   .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
     $scope.data = {};
 
     $scope.login = function() {
       LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
         $state.go('tab.dash');
-        var alerta= $ionicPopup.alert({title:'Bem vindo '+ $scope.data.username});
+        var alerta= $ionicPopup.alert({title:'Bem vindo '+ $scope.data.username + ' !'});
       }).error(function(data) {
         var alertPopup = $ionicPopup.alert({
           title: 'Login falhou!',
@@ -31,7 +32,7 @@ angular.module('starter.controllers', [])
         });
       });
     }
-    $scope.cadastro = function(){
+    $scope.cadastroForm = function(){
       $state.go('cadastro');
     }
 
@@ -41,12 +42,25 @@ angular.module('starter.controllers', [])
 
 
     $scope.logout = function(){
+    LogoutService.logoutUser($scope.data.username).success(function(data) {
 
+      $state.go('login');
+    }).error(function(data){
+
+    })
 }
   })
 
+// Envia os dados passados pelo Usuário para o CadastroService cuidar de cadastrar...
   .controller('CadastroCtrl',function($scope,CadastroService,$state){
+$scope.cadastrar = function(){
 
+  CadastroService.cadUser($scope.data.name,$scope.data.username,$scope.data.email,$scope.data.password).success(function(data){
+    $state.go('tab.dash');
+  }).error(function(data){
+
+  })
+}
   })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
