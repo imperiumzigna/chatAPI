@@ -48,7 +48,6 @@
 "C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\www\index.html" "www\index.html"
 "C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\www\templates\cadastro.html" "www\templates\cadastro.html"
 "C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\www\templates\chat-detail.html" "www\templates\chat-detail.html"
-"C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\www\templates\create-account.html" "www\templates\create-account.html"
 "C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\www\templates\login.html" "www\templates\login.html"
 "C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\www\templates\tab-account.html" "www\templates\tab-account.html"
 "C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\chatAPI\chat_frontEnd\platforms\windows\www\templates\tab-chats.html" "www\templates\tab-chats.html"
